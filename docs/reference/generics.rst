@@ -2,11 +2,14 @@ Generics
 ========
 
 You may have seen type hints like ``list[str]`` or ``dict[str, int]`` in Python
-code. These types are interesting in that they are parametrised by other types!
-A ``list[str]`` isn't just a list, it's a list of strings. Types with type
-parameters like this are called *generic types*.
+code. A ``list[str]`` isn't just a list, it's a list of strings. A type with
+type arguments `type[type arguments]` is called *generic types*. A generic type
+can pass its type arguments explicitly or implicitly to the type parameters of
+a generic class or function to set the types of the variables, and method parameters
+and return value in the generic class or the types of the variables, parameters
+and return value in the generic function.
 
-You can define your own generic classes that take type parameters, similar to
+You can define your own generic classes that take type arguments, similar to
 built-in types such as ``list[X]``. Note that such user-defined generics are a
 moderately advanced feature and you can get far without ever using them.
 
@@ -488,7 +491,7 @@ above:
     largest_in_absolute_value('a', 'b')  # error: error: Value of type variable "T" of "largest_in_absolute_value" cannot be "str"
 
 Type parameters of generic classes may also have upper bounds, which
-restrict the valid values for the type parameter in the same way.
+restrict the valid type arguments for the type parameter in the same way.
 
 .. _type-variable-value-restriction:
 
