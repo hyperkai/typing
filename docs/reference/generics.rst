@@ -4,8 +4,9 @@ Generics
 You may have seen type hints like ``list[str]`` or ``dict[str, int]`` in Python
 code. A ``list[str]`` isn't just a list, it's a list of strings. A type with
 type arguments `type[type arguments]` is called *generic types*. A generic type
-can set its type arguments to the variables, and method parameters and return value
-in a generic class and the variables, parameters and return value in a generic function.
+can pass its type arguments explicitly or implicitly to the type parameters of
+a generic class or function to set the variables, and method parameters and return value
+in the generic class or the variables, parameters and return value in the generic function.
 
 You can define your own generic classes that take type arguments, similar to
 built-in types such as ``list[X]``. Note that such user-defined generics are a
